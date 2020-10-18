@@ -1,6 +1,6 @@
 CREATE PROCEDURE salaryDifference()
 BEGIN
-        SELECT IF(COUNT(*) != 0, ((mx.salary * mx.count) - (mn.salary * mn.count)), 0) difference FROM
+        SELECT IF(COUNT(*) != 0, ((mx.salary * mx.count) - (mn.salary * mn.count)), 0) salary_diff FROM
         (
         SELECT salary , COUNT(*) count FROM employees
         GROUP BY salary

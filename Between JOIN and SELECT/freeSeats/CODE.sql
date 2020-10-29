@@ -11,4 +11,5 @@ BEGIN
                GROUP BY flight_id) pu
     ON pu.flight_id=f.flight_id
     GROUP BY f.flight_id;
+    ORDER BY f.flight_id;
 END
